@@ -10,20 +10,7 @@ let currentPage = 1;
 let rowsPerPage = 10;
 let filteredData = [...data];
 
-// Functions
-function renderTable(){
-    const tbody = document.getElementById('tableBody');
-    tbody.innerHTML = "";
-    const start = (currentPage-1)*rowsPerPage;
-    const end = start + rowsPerPage;
-    const pageData = filteredData.slice(start,end);
-    pageData.forEach(row=>{
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${row.id}</td><td>${row.name}</td><td>${row.email}</td><td>${row.role}</td>`;
-        tbody.appendChild(tr);
-    });
-    renderPagination();
-}
+
 
 function renderPagination(){
     const pagination = document.getElementById('pagination');

@@ -16,6 +16,7 @@
         <script src="assets/js/custom.js"></script>
         <script defer="" src="assets/js/apexcharts.js"></script>
 
+
         <script>
             document.addEventListener('alpine:init', () => {
                 // main section
