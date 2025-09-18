@@ -106,6 +106,34 @@ require_once "includes/dataTablecss.php";
     
     <div class="pagination" id="pagination"></div>
 </div>
+<!-- Edit Permission Modal -->
+<div class="fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto" id="editModal">
+    <div class="flex items-start justify-center min-h-screen px-4">
+        <div class="panel border-0 p-0 rounded-lg overflow-hidden my-8 w-full max-w-lg bg-white">
+            <div class="flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3">
+                <div class="font-bold text-lg">Edit Permission</div>
+            </div>
+            <div class="p-5">
+                <form id="permessionEditForm">
+                    <input type="hidden" name="id" id="editId">
+                    <label class="mb-2">Display Name <span class="text-danger">*</span></label>
+                    <input name="dName" id="editDName" type="text" class="form-input">
+
+                    <label class="my-2">Permission <span class="text-danger">*</span></label>
+                    <input name="permession" id="editPermession" type="text" class="form-input">
+
+                    <label class="my-2">Description</label>
+                    <textarea name="description" id="editDescription" class="form-textarea"></textarea>
+
+                    <div class="flex justify-end items-center mt-8">
+                                            <button type="button" class="btn btn-outline-danger" @click="toggle">Discard</button>
+                        <button type="submit" class="btn btn-primary ltr:ml-4 rtl:mr-4">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
   </div>
